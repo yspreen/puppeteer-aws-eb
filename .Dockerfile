@@ -1,3 +1,6 @@
+# Public Image yspreen/puppeteer
+# No manual build needed.
+
 FROM node:8-slim
 
 # See https://crbug.com/795759
@@ -36,7 +39,5 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
 
 # Run everything after as non-privileged user.
 USER pptruser
-
-EXPOSE 80
 
 ENTRYPOINT ["dumb-init", "--"]

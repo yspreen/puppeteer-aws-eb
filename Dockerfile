@@ -1,4 +1,6 @@
 FROM yspreen/puppeteer
+
+# Required for EB deployment:
 EXPOSE 80
 
 WORKDIR /appshare
